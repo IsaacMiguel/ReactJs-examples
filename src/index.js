@@ -14,10 +14,11 @@ import ReactDOM from 'react-dom';
 //import Form from './examples/Form';
 //import SelectedTag from './examples/SelectedTag';
 //import LiftingStateUp from './examples/LiftingStateUp';
-import LiftStateUpSecondInput from './examples/LiftStateUpSecondInput';
+//import LiftStateUpSecondInput from './examples/LiftStateUpSecondInput';
+import Containment from './examples/Containment';
 
 ReactDOM.render(
-  <LiftStateUpSecondInput />,
+  <Containment />,
   document.getElementById('root')
 );
 

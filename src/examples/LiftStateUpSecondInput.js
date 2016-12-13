@@ -16,7 +16,7 @@ const toFahrenheit = (celsius) => {
 const tryConvert = (value, convert) => {
   const input = parseFloat(value);
   if (Number.isNaN(input)) {
-  	return '';
+    return '';
   }
 
   const output = convert(input);
@@ -60,22 +60,22 @@ class TemperatureInput extends React.Component {
   }
 }
 
-
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
     this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
-    this.state = {value: '', scale: 'c'};
+    this.state = { value: '', scale: 'c' };
   }
 
   handleCelsiusChange(value) {
-    this.setState({scale: 'c', value});
+    this.setState({ scale: 'c', value });
   }
 
   handleFahrenheitChange(value) {
-    this.setState({scale: 'f', value});
+    this.setState({ scale: 'f', value });
   }
+
   render() {
     const scale = this.state.scale;
     const value = this.state.value;
@@ -88,8 +88,8 @@ class Calculator extends React.Component {
           value={ celsius }
           onChange={ this.handleCelsiusChange } />
         <TemperatureInput scale="f" 
-          value={fahrenheit}
-          onChange={this.handleFahrenheitChange}/>
+          value={ fahrenheit }
+          onChange={ this.handleFahrenheitChange }/>
         <BoilingVerdict
           celsius={ parseFloat(celsius) } />
       </div>
